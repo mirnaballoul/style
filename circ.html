@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        .active{
+            width: 340px;
+                height: 340px;
+                line-height: 340px;
+                background:red;
+                text-align: center;
+                float: left;
+                border: 1px solid #333333;
+                border-radius:170px;
+                
+                
+        }
+        body{
+            background-color:orange;
+        }
+        #circle1{
+            background-color:black;
+        }
+        #circle2{
+            background-color:blue;
+        }
+        #circle3{
+            background-color:pink;
+        }
+        #circle4{
+            background-color:white;
+        }
+        #circle5{
+            background-color:gray;
+        }
+        #circle6{
+            background-color: yellow;
+        }
+    </style>
+    <bod>
+        <div>
+            <div id=circle1 class="active" onclick="changebody('circle1')"></div>
+            <div id=circle2 class="active" onclick="changebody('circle2')"></div>
+            <div id=circle3 class="active" onclick="changebody('circle3')"></div>
+            <div id=circle4 class="active" onclick="changebody('circle4')"></div>
+            <div id=circle5 class="active" onclick="changebody('circle5')"></div>
+            <div id=circle6 class="active" onclick="changebody('circle6')"></div>
+        </div>
+        <button type="button" onclick="changebodybg('red')"></button>
+        <button type="button" onclick="changebodybg('blue')"></button>
+        <button type="button" onclick="changebodybg('white')"></button>
+        <button type="button" onclick="changebodybg('green')"></button>
+        <button type="button" onclick="changebodybg('lime')"></button>
+        <button type="button" onclick="changebodybg('gray')"></button>
+        <script>
+            function changebody(id){
+                let hold = document.getElementById(id);
+                if(hold.style.background!=='greenyellow'){
+                    hold.style.background='greenyellow';
+                }else {
+                    for (let i =0 ; i< circ.length;++i)
+                    {
+                        if (circ[i].id == id)
+                        {
+                            hold.style.background = circ[i].color;
+                        }
+                    }
+                }
+            }
+            function changebodybg(color){
+                document.body.style.background=color;
+            }
+            let circ=[
+                {
+                    color:"black",
+                    id:"circle1",
+                },
+                {
+                    color:"blue",
+                    id:"circle2",
+                },
+                {
+                    color:"pink",
+                    id:"circle3",
+                },
+                {
+                    color:"white",
+                    id:"circle4",
+                },
+                {
+                    color:"gray",
+                    id:"circle5",
+                },
+                {
+                    color:"yellow",
+                    id:"circle6",
+                },
+             ]
+        </script>
+    </bod>
+</html>
